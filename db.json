@@ -1,14 +1,88 @@
 {
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
+  "users": [
+    {
+      "id": 1,
+      "email": "inspector@realestatecare.nl",
+      "password": "Test123!", 
+      "twoFactorCode": "123456",
+      "name": "Jan Inspecteur",
+      "role": "inspector"
+    }
   ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
+
+  "openInspections": [
+    {
+      "id": 101,
+      "address": "Dorpsstraat 12, Utrecht",
+      "datePlanned": "2025-11-20",
+      "priority": "high",
+      "status": "open",
+      "type": "periodieke inspectie",
+      "assignedTo": 1,
+      "notes": "Controleer met name de dakgoten en vochtplekken."
+    },
+    {
+      "id": 102,
+      "address": "Bergweg 44, Amersfoort",
+      "datePlanned": "2025-11-22",
+      "priority": "medium",
+      "status": "open",
+      "type": "opleverinspectie",
+      "assignedTo": 1,
+      "notes": "Nieuwbouw, let op afwerking muren."
+    }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+
+  "completedInspections": [
+    {
+      "id": 201,
+      "address": "Kanaalstraat 88, Utrecht",
+      "dateCompleted": "2025-10-10",
+      "type": "periodieke inspectie",
+      "inspectorId": 1,
+      "reportUrl": "/reports/report-201.pdf",
+      "issuesFound": [
+        {
+          "id": 1,
+          "title": "Lichte vochtplek in kelder",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "id": 202,
+      "address": "Parklaan 5, Zeist",
+      "dateCompleted": "2025-09-28",
+      "type": "schade-inspectie",
+      "inspectorId": 1,
+      "reportUrl": "/reports/report-202.pdf",
+      "issuesFound": []
+    }
+  ],
+
+  "settings": {
+    "notifications": {
+      "email": true,
+      "push": false
+    },
+    "theme": "light",
+    "language": "nl"
+  },
+
+  "knowledgeBase": [
+    {
+      "id": 1,
+      "category": "Inspectie Richtlijnen",
+      "title": "Vochtproblemen herkennen",
+      "content": "Vochtplekken zijn vaak herkenbaar aan verkleuringen...",
+      "lastUpdated": "2024-12-01"
+    },
+    {
+      "id": 2,
+      "category": "Veiligheid",
+      "title": "Werken op hoogte",
+      "content": "Bij het werken op ladders en steigers is het verplicht...",
+      "lastUpdated": "2025-01-14"
+    }
+  ]
 }
