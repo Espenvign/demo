@@ -2,10 +2,10 @@
   "users": [
     {
       "id": 1,
-      "email": "inspector@realestatecare.nl",
+      "email": "sala@sala.nl",
       "password": "Test123!", 
       "twoFactorCode": "123456",
-      "name": "Jan Inspecteur",
+      "name": "Mamoudou Sala",
       "role": "inspector"
     }
   ],
